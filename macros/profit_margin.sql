@@ -1,5 +1,6 @@
-{% macro profit_margin(profit,sales) %}
+{% macro profit_margin(column_name_1, column_name_2) %}
 
-    {{ ROUND((profit / sales) * 100,2) }}
+    ROUND( {{column_name_1}} / {{column_name_2}} * 100 , 2) 
 
 {% endmacro %}
+

@@ -5,5 +5,4 @@ CASE
     WHEN profit >= 0 AND profit <= 50 THEN 'Low-Profit' 
     ELSE 'Loss'
 END 
-    as CUSTOMER_CATEGORY
 {% endmacro %}
