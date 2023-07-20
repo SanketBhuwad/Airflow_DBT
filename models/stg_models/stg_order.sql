@@ -11,10 +11,10 @@ with orders as (
         QUANTITY, 
         DISCOUNT, 
         ROUND(PROFIT,2) AS PROFIT,
-        {{ profit_margin('profit','sales') }} as PROFIT_MARGIN,
-        {{ customer_category('profit')}} AS CUSTOMER_CATEGORY
+        {{ profit_margin('profit','sales')}} as Profit_margin,
+        {{ customer_category('profit')}} as customer_category
 
-    from {{ source('stg_models', 'orders') }}
+    from {{ source('stg_models','orders') }}
 )
 
 select * from orders
