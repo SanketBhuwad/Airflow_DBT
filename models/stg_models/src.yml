@@ -1,0 +1,34 @@
+version: 2
+sources:
+  - name: stg_models
+    description: Staging of tables.
+    database: my_project
+    schema: public
+    tables:
+      - name: customer
+        description: Raw customer data.
+        columns:
+          - name: customer_id
+            description: Primary key for customer.
+            #incremental = true
+            tests:
+              - unique
+              - not_null
+      - name: product
+        description: Raw products data.
+        columns:
+          - name: product_id
+            description: Primary key for products.
+            #incremental = true
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        description: Raw orders data.
+        columns:
+          - name: order_id
+            description: Primary key for orders.
+            #incremental = true
+            tests:
+              - unique
+              - not_null
